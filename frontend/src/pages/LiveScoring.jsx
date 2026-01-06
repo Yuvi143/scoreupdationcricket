@@ -374,7 +374,14 @@ const LiveScoring = () => {
                 <h4 className="text-sm text-gray-400 mb-2">Batsmen ({battingTeamData?.shortName})</h4>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {battingTeamData?.players.map(player => {
+                    // Check if already batting (not out)
                     const alreadyBatting = innings?.batsmen.find(b => b.name === player && !b.isOut);
+                    // Check if this batsman is out (should be hidden from selection)
+                    const isOut = innings?.batsmen.find(b => b.name === player && b.isOut);
+                    
+                    // Don't show batsmen who are already out
+                    if (isOut) return null;
+                    
                     return (
                       <Button
                         key={player}
@@ -402,16 +409,22 @@ const LiveScoring = () => {
               <div>
                 <h4 className="text-sm text-gray-400 mb-2">Bowlers ({bowlingTeamData?.shortName})</h4>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                  {bowlingTeamData?.players.map(player => (
-                    <Button
-                      key={player}
-                      onClick={() => selectPlayer(player, 'bowler')}
-                      className="bg-red-600 hover:bg-red-700"
-                      data-testid={`select-bowler-${player.replace(/\s+/g, '-').toLowerCase()}`}
-                    >
-                      {player}
-                    </Button>
-                  ))}
+                  {bowlingTeamData?.players.map(player => {
+                    // Check if this bowler is currently bowling
+                    const isCurrentBowler = innings?.currentBowler === player;
+                    
+                    return (
+                      <Button
+                        key={player}
+                        onClick={() => selectPlayer(player, 'bowler')}
+                        disabled={isCurrentBowler}
+                        className="bg-red-600 hover:bg-red-700 disabled:opacity-30"
+                        data-testid={`select-bowler-${player.replace(/\s+/g, '-').toLowerCase()}`}
+                      >
+                        {player}
+                      </Button>
+                    );
+                  })}
                 </div>
               </div>
             )}
