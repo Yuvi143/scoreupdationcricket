@@ -1,0 +1,38 @@
+{
+  "teams": [
+    {
+      "name": "Mumbai Indians",
+      "shortName": "MI",
+      "players": [
+        "Rohit Sharma",
+        "Ishan Kishan",
+        "Suryakumar Yadav",
+        "Tilak Varma",
+        "Hardik Pandya",
+        "Tim David",
+        "Jasprit Bumrah",
+        "Arjun Tendulkar",
+        "Piyush Chawla",
+        "Jofra Archer",
+        "Cameron Green"
+      ]
+    },
+    {
+      "name": "Chennai Super Kings",
+      "shortName": "CSK",
+      "players": [
+        "MS Dhoni",
+        "Ruturaj Gaikwad",
+        "Devon Conway",
+        "Shivam Dube",
+        "Ravindra Jadeja",
+        "Moeen Ali",
+        "Deepak Chahar",
+        "Tushar Deshpande",
+        "Maheesh Theekshana",
+        "Matheesha Pathirana",
+        "Ajinkya Rahane"
+      ]
+    }
+  ]
+}

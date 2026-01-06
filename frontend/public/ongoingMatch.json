@@ -1,0 +1,74 @@
+{
+  "matchId": "match_001",
+  "teamA": {
+    "name": "Mumbai Indians",
+    "shortName": "MI"
+  },
+  "teamB": {
+    "name": "Chennai Super Kings",
+    "shortName": "CSK"
+  },
+  "venue": "Wankhede Stadium, Mumbai",
+  "date": "2025-05-15",
+  "time": "19:30 IST",
+  "tossWinner": "Mumbai Indians",
+  "tossDecision": "bat",
+  "overs": 20,
+  "status": "live",
+  "currentInnings": 1,
+  "innings": [
+    {
+      "inningsNumber": 1,
+      "battingTeam": "Mumbai Indians",
+      "bowlingTeam": "Chennai Super Kings",
+      "score": 0,
+      "wickets": 0,
+      "overs": 0,
+      "balls": 0,
+      "extras": {
+        "wide": 0,
+        "noBall": 0,
+        "bye": 0,
+        "legBye": 0,
+        "total": 0
+      },
+      "batsmen": [
+        {
+          "name": "Rohit Sharma",
+          "runs": 0,
+          "balls": 0,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 0,
+          "isOut": false,
+          "dismissal": null
+        },
+        {
+          "name": "Ishan Kishan",
+          "runs": 0,
+          "balls": 0,
+          "fours": 0,
+          "sixes": 0,
+          "strikeRate": 0,
+          "isOut": false,
+          "dismissal": null
+        }
+      ],
+      "bowlers": [
+        {
+          "name": "Deepak Chahar",
+          "overs": 0,
+          "balls": 0,
+          "runs": 0,
+          "wickets": 0,
+          "economy": 0,
+          "maidens": 0
+        }
+      ],
+      "ballByBall": [],
+      "striker": "Rohit Sharma",
+      "nonStriker": "Ishan Kishan",
+      "currentBowler": "Deepak Chahar"
+    }
+  ]
+}
